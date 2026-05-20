@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - BookMyShow</title>
+
+    <link rel="stylesheet" href="bookmyshow.css">
+
+    <style>
+        .signin-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #121212;
+        }
+
+        .signin-box {
+            width: 400px;
+            background: #1b202e;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #2e3548;
+        }
+
+        .signin-box h1 {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .signin-input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border: 1px solid #3d4158;
+            background: #111827;
+            color: white;
+        }
+
+        .signin-btn {
+            width: 100%;
+            padding: 14px;
+            background: #f84464;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .back-home {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #f84464;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signin-page">
+    <div class="signin-box">
+        <h1>Sign In</h1>
+
+        <input type="email" placeholder="Email Address" class="signin-input">
+
+        <input type="password" placeholder="Password" class="signin-input">
+
+        <a href="index.html" class="signin-btn btn">
+            Login
+        </a>
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

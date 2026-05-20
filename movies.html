@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets - BookMyShow</title>
+
+    <style>
+
+        body{
+            background:#0f172a;
+        }
+
+        .booking-container{
+            max-width:1200px;
+            margin:auto;
+            padding:40px 20px;
+        }
+
+        .movie-header{
+            display:flex;
+            gap:30px;
+            background:#1b202e;
+            padding:30px;
+            border-radius:20px;
+            margin-bottom:40px;
+            border:1px solid #2e3548;
+        }
+
+        .movie-poster{
+            width:260px;
+            border-radius:16px;
+            overflow:hidden;
+        }
+
+        .movie-poster img{
+            width:100%;
+            display:block;
+        }
+
+        .movie-details h1{
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        .movie-info{
+            color:#94a3b8;
+            margin-bottom:20px;
+        }
+
+        .movie-tags{
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+            margin-bottom:25px;
+        }
+
+        .movie-tag{
+            background:#f84464;
+            padding:8px 14px;
+            border-radius:30px;
+            font-size:13px;
+            font-weight:600;
+        }
+
+        .rating-box{
+            background:#111827;
+            padding:16px 20px;
+            border-radius:12px;
+            display:inline-flex;
+            align-items:center;
+            gap:10px;
+            margin-bottom:25px;
+        }
+
+        .rating-box i{
+            color:gold;
+        }
+
+        .theatre-section{
+            background:#1b202e;
+            border-radius:20px;
+            padding:30px;
+            border:1px solid #2e3548;
+        }
+
+        .theatre-title{
+            font-size:28px;
+            margin-bottom:25px;
+        }
+
+        .theatre-card{
+            background:#111827;
+            padding:25px;
+            border-radius:16px;
+            margin-bottom:20px;
+            border:1px solid #2f3a52;
+        }
+
+        .theatre-top{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:20px;
+        }
+
+        .theatre-name{
+            font-size:22px;
+            font-weight:700;
+        }
+
+        .theatre-location{
+            color:#94a3b8;
+            font-size:14px;
+        }
+
+        .time-slots{
+            display:flex;
+            gap:16px;
+            flex-wrap:wrap;
+        }
+
+        .time-btn{
+            padding:14px 22px;
+            border-radius:10px;
+            background:#0f172a;
+            border:1px solid #334155;
+            color:white;
+            text-decoration:none;
+            transition:.3s;
+            font-weight:600;
+        }
+
+        .time-btn:hover{
+            background:#16a34a;
+            border-color:#16a34a;
+            transform:translateY(-3px);
+        }
+
+        .screen-box{
+            margin-top:50px;
+            text-align:center;
+        }
+
+        .screen{
+            width:80%;
+            margin:auto;
+            background:linear-gradient(to right,#f8fafc,#94a3b8,#f8fafc);
+            padding:12px;
+            border-radius:100px;
+            color:black;
+            font-weight:700;
+            margin-bottom:40px;
+        }
+
+        .seat-grid{
+            display:grid;
+            grid-template-columns:repeat(10,1fr);
+            gap:12px;
+            max-width:700px;
+            margin:auto;
+        }
+
+        .seat{
+            background:#1e293b;
+            padding:14px;
+            border-radius:8px;
+            cursor:pointer;
+            transition:.3s;
+            border:1px solid #334155;
+        }
+
+        .seat:hover{
+            background:#f84464;
+            transform:scale(1.08);
+        }
+
+        .seat.booked{
+            background:#475569;
+            opacity:.5;
+            cursor:not-allowed;
+        }
+
+        .payment-box{
+            margin-top:50px;
+            text-align:center;
+        }
+
+        .confirm-btn{
+            background:#f84464;
+            padding:16px 40px;
+            border-radius:12px;
+            text-decoration:none;
+            color:white;
+            font-weight:700;
+            display:inline-block;
+            margin-top:20px;
+            transition:.3s;
+        }
+
+        .confirm-btn:hover{
+            background:#e11d48;
+            transform:translateY(-3px);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="booking-container">
+
+    <!-- MOVIE DETAILS -->
+
+    <div class="movie-header">
+
+        <div class="movie-poster">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop">
+        </div>
+
+        <div class="movie-details">
+
+            <h1>Dune: Part Two</h1>
+
+            <div class="movie-info">
+                Sci-Fi • Adventure • Action • 2h 46m
+            </div>
+
+            <div class="movie-tags">
+                <div class="movie-tag">IMAX 3D</div>
+                <div class="movie-tag">Dolby Atmos</div>
+                <div class="movie-tag">4DX</div>
+            </div>
+
+            <div class="rating-box">
+                <i class="fa-solid fa-star"></i>
+                <span>9.4/10</span>
+                <span>482K Ratings</span>
+            </div>
+
+            <p style="color:#cbd5e1; max-width:700px;">
+                Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- THEATRES -->
+
+    <div class="theatre-section">
+
+        <h2 class="theatre-title">Select Showtime</h2>
+
+        <div class="theatre-card">
+
+            <div class="theatre-top">
+                <div>
+                    <div class="theatre-name">PVR Phoenix Mall</div>
+                    <div class="theatre-location">Lower Parel, Mumbai</div>
+                </div>
+
+                <div style="color:#22c55e;font-weight:700;">
+                    FAST FILLING
+                </div>
+            </div>
+
+            <div class="time-slots">
+                <a href="#" class="time-btn">10:30 AM</a>
+                <a href="#" class="time-btn">1:45 PM</a>
+                <a href="#" class="time-btn">4:15 PM</a>
+                <a href="#" class="time-btn">7:30 PM</a>
+                <a href="#" class="time-btn">10:45 PM</a>
+            </div>
+
+        </div>
+
+        <div class="theatre-card">
+
+            <div class="theatre-top">
+                <div>
+                    <div class="theatre-name">INOX Megaplex</div>
+                    <div class="theatre-location">Nariman Point, Mumbai</div>
+                </div>
+
+                <div style="color:#38bdf8;font-weight:700;">
+                    IMAX EXPERIENCE
+                </div>
+            </div>
+
+            <div class="time-slots">
+                <a href="#" class="time-btn">11:00 AM</a>
+                <a href="#" class="time-btn">2:15 PM</a>
+                <a href="#" class="time-btn">5:45 PM</a>
+                <a href="#" class="time-btn">9:30 PM</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SCREEN -->
+
+    <div class="screen-box">
+
+        <div class="screen">
+            SCREEN THIS WAY
+        </div>
+
+        <div class="seat-grid">
+
+            <div class="seat">A1</div>
+            <div class="seat">A2</div>
+            <div class="seat">A3</div>
+            <div class="seat booked">A4</div>
+            <div class="seat">A5</div>
+            <div class="seat">A6</div>
+            <div class="seat booked">A7</div>
+            <div class="seat">A8</div>
+            <div class="seat">A9</div>
+            <div class="seat">A10</div>
+
+            <div class="seat">B1</div>
+            <div class="seat">B2</div>
+            <div class="seat">B3</div>
+            <div class="seat">B4</div>
+            <div class="seat">B5</div>
+            <div class="seat">B6</div>
+            <div class="seat">B7</div>
+            <div class="seat booked">B8</div>
+            <div class="seat">B9</div>
+            <div class="seat">B10</div>
+
+        </div>
+
+    </div>
+
+    <!-- PAYMENT -->
+
+    <div class="payment-box">
+
+        <h2>Total: ₹850</h2>
+
+        <a href="index.html" class="confirm-btn">
+            Proceed To Payment
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
