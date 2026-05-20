@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - BookMyShow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+<!-- Progress Header -->
+<header class="prog-header">
+    <div class="container prog-inner">
+        <a href="seats.html" class="back-link"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="movie-summary">
+            <h1>Complete your booking</h1>
+            <p>Dune: Part Two • PVR ICON: Orion Mall • 4:45 PM</p>
+        </div>
+        <div class="steps">
+            <span class="step done">1. Showtime</span>
+            <span class="step done">2. Seats</span>
+            <span class="step active">3. Payment</span>
+        </div>
+    </div>
+</header>
+
+<main class="pay-main">
+    <div class="container pay-grid">
+
+        <!-- LEFT: PAYMENT OPTIONS -->
+        <div class="pay-left">
+
+            <!-- Contact Info -->
+            <div class="pay-card">
+                <h3><i class="fa-solid fa-user"></i> Contact Information</h3>
+                <div class="input-row">
+                    <input type="email" placeholder="Email Address" class="pay-input" value="user@example.com">
+                    <input type="tel" placeholder="Mobile Number" class="pay-input" value="+91 9876543210">
+                </div>
+                <small class="hint">Booking confirmation will be sent to email & SMS</small>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="pay-card">
+                <h3><i class="fa-solid fa-credit-card"></i> Choose Payment Method</h3>
+
+                <!-- Tabs -->
+                <input type="radio" name="paytab" id="tab-card" checked>
+                <input type="radio" name="paytab" id="tab-upi">
+                <input type="radio" name="paytab" id="tab-net">
+                <input type="radio" name="paytab" id="tab-wallet">
+
+                <div class="pay-tabs">
+                    <label for="tab-card" class="pay-tab"><i class="fa-regular fa-credit-card"></i> Card</label>
+                    <label for="tab-upi" class="pay-tab"><i class="fa-solid fa-mobile-screen"></i> UPI</label>
+                    <label for="tab-net" class="pay-tab"><i class="fa-solid fa-building-columns"></i> Net Banking</label>
+                    <label for="tab-wallet" class="pay-tab"><i class="fa-solid fa-wallet"></i> Wallet</label>
+                </div>
+
+                <!-- CARD FORM -->
+                <div class="pay-method method-card">
+                    <div class="input-group">
+                        <i class="fa-regular fa-credit-card input-icon"></i>
+                        <input type="text" placeholder="Card Number (1234 5678 9012 3456)" class="pay-input" maxlength="19">
+                    </div>
+                    <div class="input-row">
+                        <input type="text" placeholder="MM / YY" class="pay-input" maxlength="5">
+                        <input type="text" placeholder="CVV" class="pay-input" maxlength="3">
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" placeholder="Cardholder Name" class="pay-input">
+                    </div>
+                    <label class="save-card">
+                        <input type="checkbox"> <span>Save this card for future payments</span>
+                    </label>
+                    <div class="accepted-cards">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-amex"></i>
+                        <i class="fa-brands fa-cc-discover"></i>
+                    </div>
+                </div>
+
+                <!-- UPI FORM -->
+                <div class="pay-method method-upi">
+                    <div class="input-group">
+                        <i class="fa-solid fa-at input-icon"></i>
+                        <input type="text" placeholder="Enter UPI ID (yourname@upi)" class="pay-input">
+                    </div>
+                    <div class="upi-apps">
+                        <button class="upi-app"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/GooglePay_AcceptanceMark_RGB_Stacked.png" alt="GPay"><span>Google Pay</span></button>
+                        <button class="upi-app"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Paytm_logo.png" alt="Paytm"><span>Paytm</span></button>
+                        <button class="upi-app"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/PhonePe_Logo.svg" alt="PhonePe"><span>PhonePe</span></button>
+                        <button class="upi-app"><i class="fa-brands fa-amazon"></i><span>Amazon Pay</span></button>
+                    </div>
+                </div>
+
+                <!-- NET BANKING -->
+                <div class="pay-method method-net">
+                    <p class="bank-title">Select your bank</p>
+                    <div class="bank-grid">
+                        <button class="bank-btn">🏦 SBI Bank</button>
+                        <button class="bank-btn">🏦 HDFC Bank</button>
+                        <button class="bank-btn">🏦 ICICI Bank</button>
+                        <button class="bank-btn">🏦 Axis Bank</button>
+                        <button class="bank-btn">🏦 Kotak Bank</button>
+                        <button class="bank-btn">🏦 Yes Bank</button>
+                    </div>
+                    <select class="pay-input">
+                        <option>— Other Banks —</option>
+                        <option>Bank of Baroda</option>
+                        <option>Canara Bank</option>
+                        <option>IDFC First Bank</option>
+                        <option>Punjab National Bank</option>
+                    </select>
+                </div>
+
+                <!-- WALLET -->
+                <div class="pay-method method-wallet">
+                    <div class="wallet-grid">
+                        <button class="wallet-btn"><i class="fa-solid fa-wallet"></i><span>Paytm Wallet</span></button>
+                        <button class="wallet-btn"><i class="fa-brands fa-amazon"></i><span>Amazon Pay</span></button>
+                        <button class="wallet-btn"><i class="fa-brands fa-google"></i><span>Google Pay</span></button>
+                        <button class="wallet-btn"><i class="fa-solid fa-mobile-screen"></i><span>PhonePe</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promo Code -->
+            <div class="pay-card">
+                <h3><i class="fa-solid fa-tag"></i> Apply Promo Code</h3>
+                <div class="promo-row">
+                    <input type="text" placeholder="Enter promo code" class="pay-input">
+                    <button class="apply-btn">Apply</button>
+                </div>
+                <div class="offer-chips">
+                    <span class="chip">FIRSTSHOW — 10% OFF</span>
+                    <span class="chip">WEEKEND50 — Flat ₹50 OFF</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: ORDER SUMMARY -->
+        <aside class="pay-right">
+            <div class="summary-card">
+                <h3>Booking Summary</h3>
+
+                <div class="summary-movie">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=400&auto=format&fit=crop" alt="Movie">
+                    <div>
+                        <h4>Dune: Part Two</h4>
+                        <p>English • UA • 2D</p>
+                    </div>
+                </div>
+
+                <div class="summary-row">
+                    <span>Theatre</span>
+                    <span>PVR ICON: Orion Mall</span>
+                </div>
+                <div class="summary-row">
+                    <span>Date & Time</span>
+                    <span>28 Dec • 4:45 PM</span>
+                </div>
+                <div class="summary-row">
+                    <span>Seats</span>
+                    <span><strong>A5, A6</strong></span>
+                </div>
+
+                <hr>
+
+                <div class="summary-row">
+                    <span>Sub Total (2 tickets)</span>
+                    <span>₹500</span>
+                </div>
+                <div class="summary-row">
+                    <span>Convenience Fee</span>
+                    <span>₹45</span>
+                </div>
+                <div class="summary-row">
+                    <span>GST (18%)</span>
+                    <span>₹8</span>
+                </div>
+                <div class="summary-row discount">
+                    <span>Discount</span>
+                    <span>– ₹50</span>
+                </div>
+
+                <hr>
+
+                <div class="summary-total">
+                    <span>Amount Payable</span>
+                    <span>₹503</span>
+                </div>
+
+                <a href="success.html" class="pay-now-btn">
+                    <i class="fa-solid fa-lock"></i> Pay ₹503 Securely
+                </a>
+
+                <p class="secure-note">
+                    <i class="fa-solid fa-shield-halved"></i> 100% Secure Payments • SSL Encrypted
+                </p>
+            </div>
+
+            <div class="cancel-card">
+                <p><strong> Cancellation Policy</strong></p>
+                <p class="small">Tickets are non-refundable. Cancellations can be made up to 2 hours before showtime.</p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+</body>
+</html>

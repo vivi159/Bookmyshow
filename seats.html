@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Seats - BookMyShow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="seats.css">
+</head>
+<body>
+
+<!-- Progress Header -->
+<header class="prog-header">
+    <div class="container prog-inner">
+        <a href="movies.html" class="back-link"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="movie-summary">
+            <h1>Dune: Part Two</h1>
+            <p>PVR ICON: Orion Mall • 4:45 PM • 28 Dec 2024</p>
+        </div>
+        <div class="steps">
+            <span class="step done">1. Showtime</span>
+            <span class="step active">2. Seats</span>
+            <span class="step">3. Payment</span>
+        </div>
+    </div>
+</header>
+
+<main class="seats-main">
+    <div class="container">
+
+        <!-- Ticket Count -->
+        <div class="ticket-counter">
+            <h2>How many seats?</h2>
+            <div class="count-options">
+                <input type="radio" name="count" id="c1">
+                <label for="c1">1</label>
+                <input type="radio" name="count" id="c2" checked>
+                <label for="c2">2</label>
+                <input type="radio" name="count" id="c3">
+                <label for="c3">3</label>
+                <input type="radio" name="count" id="c4">
+                <label for="c4">4</label>
+                <input type="radio" name="count" id="c5">
+                <label for="c5">5</label>
+                <input type="radio" name="count" id="c6">
+                <label for="c6">6</label>
+            </div>
+        </div>
+
+        <!-- Seat Map -->
+        <div class="seat-map-wrap">
+            <h3 class="section-h3">Select your seats</h3>
+
+            <!-- PREMIUM SECTION -->
+            <div class="seat-section">
+                <div class="seat-price-label">PREMIUM — ₹350</div>
+
+                <div class="row">
+                    <span class="row-label">A</span>
+                    <div class="seats">
+                        <input type="checkbox" id="A1"><label for="A1" class="seat">1</label>
+                        <input type="checkbox" id="A2"><label for="A2" class="seat">2</label>
+                        <input type="checkbox" id="A3"><label for="A3" class="seat occupied">3</label>
+                        <input type="checkbox" id="A4"><label for="A4" class="seat">4</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="A5"><label for="A5" class="seat">5</label>
+                        <input type="checkbox" id="A6"><label for="A6" class="seat">6</label>
+                        <input type="checkbox" id="A7"><label for="A7" class="seat">7</label>
+                        <input type="checkbox" id="A8"><label for="A8" class="seat occupied">8</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="A9"><label for="A9" class="seat">9</label>
+                        <input type="checkbox" id="A10"><label for="A10" class="seat">10</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="row-label">B</span>
+                    <div class="seats">
+                        <input type="checkbox" id="B1"><label for="B1" class="seat">1</label>
+                        <input type="checkbox" id="B2"><label for="B2" class="seat">2</label>
+                        <input type="checkbox" id="B3"><label for="B3" class="seat">3</label>
+                        <input type="checkbox" id="B4"><label for="B4" class="seat occupied">4</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="B5"><label for="B5" class="seat">5</label>
+                        <input type="checkbox" id="B6"><label for="B6" class="seat">6</label>
+                        <input type="checkbox" id="B7"><label for="B7" class="seat">7</label>
+                        <input type="checkbox" id="B8"><label for="B8" class="seat">8</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="B9"><label for="B9" class="seat occupied">9</label>
+                        <input type="checkbox" id="B10"><label for="B10" class="seat">10</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GOLD SECTION -->
+            <div class="seat-section">
+                <div class="seat-price-label">GOLD — ₹250</div>
+
+                <div class="row">
+                    <span class="row-label">C</span>
+                    <div class="seats">
+                        <input type="checkbox" id="C1"><label for="C1" class="seat gold">1</label>
+                        <input type="checkbox" id="C2"><label for="C2" class="seat gold">2</label>
+                        <input type="checkbox" id="C3"><label for="C3" class="seat gold">3</label>
+                        <input type="checkbox" id="C4"><label for="C4" class="seat gold">4</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="C5"><label for="C5" class="seat gold occupied">5</label>
+                        <input type="checkbox" id="C6"><label for="C6" class="seat gold">6</label>
+                        <input type="checkbox" id="C7"><label for="C7" class="seat gold">7</label>
+                        <input type="checkbox" id="C8"><label for="C8" class="seat gold">8</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="C9"><label for="C9" class="seat gold">9</label>
+                        <input type="checkbox" id="C10"><label for="C10" class="seat gold">10</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="row-label">D</span>
+                    <div class="seats">
+                        <input type="checkbox" id="D1"><label for="D1" class="seat gold">1</label>
+                        <input type="checkbox" id="D2"><label for="D2" class="seat gold">2</label>
+                        <input type="checkbox" id="D3"><label for="D3" class="seat gold occupied">3</label>
+                        <input type="checkbox" id="D4"><label for="D4" class="seat gold">4</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="D5"><label for="D5" class="seat gold">5</label>
+                        <input type="checkbox" id="D6"><label for="D6" class="seat gold">6</label>
+                        <input type="checkbox" id="D7"><label for="D7" class="seat gold">7</label>
+                        <input type="checkbox" id="D8"><label for="D8" class="seat gold">8</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="D9"><label for="D9" class="seat gold">9</label>
+                        <input type="checkbox" id="D10"><label for="D10" class="seat gold">10</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SILVER SECTION -->
+            <div class="seat-section">
+                <div class="seat-price-label">SILVER — ₹180</div>
+
+                <div class="row">
+                    <span class="row-label">E</span>
+                    <div class="seats">
+                        <input type="checkbox" id="E1"><label for="E1" class="seat silver">1</label>
+                        <input type="checkbox" id="E2"><label for="E2" class="seat silver">2</label>
+                        <input type="checkbox" id="E3"><label for="E3" class="seat silver">3</label>
+                        <input type="checkbox" id="E4"><label for="E4" class="seat silver">4</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="E5"><label for="E5" class="seat silver">5</label>
+                        <input type="checkbox" id="E6"><label for="E6" class="seat silver">6</label>
+                        <input type="checkbox" id="E7"><label for="E7" class="seat silver occupied">7</label>
+                        <input type="checkbox" id="E8"><label for="E8" class="seat silver">8</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="E9"><label for="E9" class="seat silver">9</label>
+                        <input type="checkbox" id="E10"><label for="E10" class="seat silver">10</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="row-label">F</span>
+                    <div class="seats">
+                        <input type="checkbox" id="F1"><label for="F1" class="seat silver">1</label>
+                        <input type="checkbox" id="F2"><label for="F2" class="seat silver occupied">2</label>
+                        <input type="checkbox" id="F3"><label for="F3" class="seat silver">3</label>
+                        <input type="checkbox" id="F4"><label for="F4" class="seat silver">4</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="F5"><label for="F5" class="seat silver">5</label>
+                        <input type="checkbox" id="F6"><label for="F6" class="seat silver">6</label>
+                        <input type="checkbox" id="F7"><label for="F7" class="seat silver">7</label>
+                        <input type="checkbox" id="F8"><label for="F8" class="seat silver">8</label>
+                        <span class="seat-gap"></span>
+                        <input type="checkbox" id="F9"><label for="F9" class="seat silver">9</label>
+                        <input type="checkbox" id="F10"><label for="F10" class="seat silver">10</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCREEN -->
+            <div class="screen">
+                <div class="screen-line"></div>
+                <p class="screen-text">All eyes this way please! 🎬</p>
+            </div>
+
+            <!-- LEGEND -->
+            <div class="seat-legend">
+                <span><span class="legend-box available"></span> Available</span>
+                <span><span class="legend-box selected"></span> Selected</span>
+                <span><span class="legend-box occupied"></span> Sold</span>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Sticky Footer Booking Bar -->
+<div class="booking-bar">
+    <div class="container booking-inner">
+        <div class="summary-text">
+            <span class="seat-count">2 Tickets</span>
+            <span class="amount">₹500</span>
+        </div>
+        <a href="payment.html" class="proceed-btn">Pay <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookMyShow - Movie Tickets, Plays, Sports, Events & Cinemas</title>
+    <title>BookyourShow - Movie Tickets, Plays, Sports, Events & Cinemas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -12,45 +12,108 @@
 </head>
 <body>
 
+    <input type="checkbox" id="mobile-menu-toggle" class="hidden-toggle">
+    <div class="mobile-overlay">
+        <label for="mobile-menu-toggle" class="overlay-close"><i class="fa-solid fa-xmark"></i></label>
+        <div class="mobile-menu-content">
+            <a href="#" class="brand-logo mobile-logo">
+                <i class="fa-solid fa-ticket"></i> Bookyour<span>Show</span>
+            </a>
+            <nav class="mobile-nav-links">
+                <a href="#movies"><i class="fa-solid fa-film"></i> Movies</a>
+                <a href="#stream"><i class="fa-solid fa-circle-play"></i> Stream</a>
+                <a href="#events"><i class="fa-solid fa-calendar-star"></i> Events</a>
+                <a href="#activities"><i class="fa-solid fa-masks-theater"></i> Activities</a>
+                <a href="#buzz"><i class="fa-solid fa-newspaper"></i> Buzz</a>
+                <a href="#"><i class="fa-solid fa-gift"></i> Gift Cards</a>
+                <a href="#"><i class="fa-solid fa-percent"></i> Offers</a>
+                <a href="signin.html"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a>
+            </nav>
+            <div class="mobile-city-section">
+                <p class="mobile-city-title">Select City</p>
+                <div class="mobile-city-grid">
+                    <span class="mobile-city">Mumbai</span>
+                    <span class="mobile-city">Delhi NCR</span>
+                    <span class="mobile-city active">Bengaluru</span>
+                    <span class="mobile-city">Hyderabad</span>
+                    <span class="mobile-city">Chennai</span>
+                    <span class="mobile-city">Kolkata</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="search-toggle" class="hidden-toggle">
+    <div class="search-overlay">
+        <div class="search-overlay-content">
+            <label for="search-toggle" class="search-close"><i class="fa-solid fa-xmark"></i></label>
+            <h2>Search Everything</h2>
+            <div class="search-overlay-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for Movies, Events, Plays, Sports..." class="search-overlay-input" autofocus>
+            </div>
+            <div class="search-suggestions">
+                <p class="suggestion-title">Trending Searches</p>
+                <div class="suggestion-tags">
+                    <a href="movies.html" class="suggestion-tag"><i class="fa-solid fa-fire"></i> Dune: Part Two</a>
+                    <a href="movies.html" class="suggestion-tag"><i class="fa-solid fa-fire"></i> Batman</a>
+                    <a href="#events" class="suggestion-tag"><i class="fa-solid fa-fire"></i> Sunburn Arena</a>
+                    <a href="movies.html" class="suggestion-tag"><i class="fa-solid fa-fire"></i> John Wick 4</a>
+                    <a href="#events" class="suggestion-tag"><i class="fa-solid fa-fire"></i> Comedy Shows</a>
+                    <a href="#stream" class="suggestion-tag"><i class="fa-solid fa-fire"></i> Neon Nights</a>
+                </div>
+                <p class="suggestion-title">Popular Categories</p>
+                <div class="suggestion-tags">
+                    <a href="#movies" class="suggestion-tag cat"><i class="fa-solid fa-film"></i> Movies</a>
+                    <a href="#events" class="suggestion-tag cat"><i class="fa-solid fa-music"></i> Concerts</a>
+                    <a href="#activities" class="suggestion-tag cat"><i class="fa-solid fa-gamepad"></i> Esports</a>
+                    <a href="#activities" class="suggestion-tag cat"><i class="fa-solid fa-masks-theater"></i> Theatre</a>
+                    <a href="#stream" class="suggestion-tag cat"><i class="fa-solid fa-circle-play"></i> Stream</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <nav class="top-nav">
             <div class="container nav-container">
                 <div class="nav-left">
-                    <a href="#" class="brand-logo">
+                    <a href="index.html" class="brand-logo">
                         <i class="fa-solid fa-ticket"></i>
                         BookYour<span>Show</span>
                     </a>
-                    <div class="search-container">
+                    <label for="search-toggle" class="search-container search-trigger">
                         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                        <input type="text" class="search-input" placeholder="Search for Movies, Events, Plays, Sports and Activities">
-                    </div>
+                        <span class="search-placeholder">Search for Movies, Events, Plays, Sports...</span>
+                    </label>
                 </div>
 
                 <div class="nav-right">
                     <div class="city-selector">
-                        <i class="fa-solid fa-location-dot" style="color: var(--accent);"></i>
+                        <i class="fa-solid fa-location-dot city-dot"></i>
                         <span>Bengaluru</span>
-                        <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i>
+                        <i class="fa-solid fa-chevron-down city-arrow"></i>
                         
                         <div class="city-dropdown">
                             <div class="dropdown-title">Popular Cities</div>
                             <div class="city-grid">
-                                <div class="city-item">Mumbai</div>
-                                <div class="city-item">NCR</div>
-                                <div class="city-item">Bengaluru</div>
-                                <div class="city-item">Hyderabad</div>
-                                <div class="city-item">Ahmedabad</div>
-                                <div class="city-item">Chandigarh</div>
-                                <div class="city-item">Chennai</div>
-                                <div class="city-item">Pune</div>
-                                <div class="city-item">Kolkata</div>
+                                <a href="#" class="city-item">Mumbai</a>
+                                <a href="#" class="city-item">NCR</a>
+                                <a href="#" class="city-item active">Bengaluru</a>
+                                <a href="#" class="city-item">Hyderabad</a>
+                                <a href="#" class="city-item">Ahmedabad</a>
+                                <a href="#" class="city-item">Chandigarh</a>
+                                <a href="#" class="city-item">Chennai</a>
+                                <a href="#" class="city-item">Pune</a>
+                                <a href="#" class="city-item">Kolkata</a>
                             </div>
                         </div>
                     </div>
 
                     <a href="signin.html" class="btn btn-primary">Sign In</a>
-                    <div class="menu-toggle" title="Menu">
-                    </div>
+                    <label for="mobile-menu-toggle" class="menu-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
                 </div>
             </div>
         </nav>
@@ -61,14 +124,14 @@
                     <li><a href="#movies" class="sub-nav-link">Movies</a></li>
                     <li><a href="#stream" class="sub-nav-link">Stream<span class="sub-nav-badge">New</span></a></li>
                     <li><a href="#events" class="sub-nav-link">Events</a></li>
-                    <li><a href="#plays" class="sub-nav-link">Plays</a></li>
-                    <li><a href="#sports" class="sub-nav-link">Sports</a></li>
+                    <li><a href="#" class="sub-nav-link">Plays</a></li>
+                    <li><a href="#" class="sub-nav-link">Sports</a></li>
                     <li><a href="#activities" class="sub-nav-link">Activities</a></li>
                     <li><a href="#buzz" class="sub-nav-link">Buzz</a></li>
                 </ul>
                 <ul class="sub-nav-list sub-nav-right">
-                    <li><a href="#" class="sub-nav-link" style="color: #cbd5e1; font-weight: 600;"><i class="fa-solid fa-tower-broadcast" style="margin-right: 6px; color: var(--accent);"></i>ListYourShow</a></li>
-                    <li><a href="#" class="sub-nav-link">Corporate Studio</a></li>
+                    <li><a href="#" class="sub-nav-link sub-nav-list-link"><i class="fa-solid fa-tower-broadcast sub-nav-list-icon"></i>ListYourShow</a></li>
+                    <li><a href="#" class="sub-nav-link">Corporate</a></li>
                     <li><a href="#" class="sub-nav-link">Offers</a></li>
                     <li><a href="#" class="sub-nav-link">Gift Cards</a></li>
                 </ul>
@@ -78,105 +141,144 @@
 
     <main>
 
-<section class="trend-section container">
-
-    <div class="trend-head">
-        <h2>Trending Events</h2>
-
-        <div class="trend-nav">
-            <label for="event1"><i class="fa-solid fa-chevron-left"></i></label>
-            <label for="event2"><i class="fa-solid fa-chevron-right"></i></label>
-        </div>
-    </div>
-
-    <input type="radio" name="event-slider" id="event1" checked>
-    <input type="radio" name="event-slider" id="event2">
-
-    <div class="trend-slider">
-
-        <div class="trend-track first">
-
-            <div class="trend-card">
-                <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop">
-                <div class="trend-info">
-                    <span>LIVE MUSIC</span>
-                    <h3>Sunburn Arena</h3>
-                    <p>Mumbai • EDM Festival</p>
+        <section class="trend-section container">
+            <div class="trend-head">
+                <h2>Trending Events</h2>
+                <div class="trend-nav">
+                    <label for="event1"><i class="fa-solid fa-chevron-left"></i></label>
+                    <label for="event2"><i class="fa-solid fa-chevron-right"></i></label>
                 </div>
             </div>
 
-            <div class="trend-card">
-                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop">
-                <div class="trend-info">
-                    <span>COMEDY</span>
-                    <h3>Standup Nights</h3>
-                    <p>Bangalore • Live Show</p>
+            <input type="radio" name="event-slider" id="event1" checked>
+            <input type="radio" name="event-slider" id="event2">
+
+            <div class="trend-slider">
+                <div class="trend-track first">
+                    <a href="movies.html" class="trend-card">
+                        <div class="trend-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop" alt="Sunburn Arena">
+                            <div class="trend-hover-overlay">
+                                <span class="trend-view-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+                            </div>
+                        </div>
+                        <div class="trend-info">
+                            <span>LIVE MUSIC</span>
+                            <h3>Sunburn Arena</h3>
+                            <p>Mumbai • EDM Festival</p>
+                            <div class="trend-price">₹999 onwards</div>
+                        </div>
+                    </a>
+
+                    <a href="movies.html" class="trend-card">
+                        <div class="trend-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop" alt="Standup Nights">
+                            <div class="trend-hover-overlay">
+                                <span class="trend-view-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+                            </div>
+                        </div>
+                        <div class="trend-info">
+                            <span>COMEDY</span>
+                            <h3>Standup Nights</h3>
+                            <p>Bangalore • Live Show</p>
+                            <div class="trend-price">₹499 onwards</div>
+                        </div>
+                    </a>
+
+                    <a href="movies.html" class="trend-card">
+                        <div class="trend-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=1200&auto=format&fit=crop" alt="Gaming Finals">
+                            <div class="trend-hover-overlay">
+                                <span class="trend-view-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+                            </div>
+                        </div>
+                        <div class="trend-info">
+                            <span>ESPORTS</span>
+                            <h3>Gaming Finals</h3>
+                            <p>Delhi • Arena Event</p>
+                            <div class="trend-price">₹299 onwards</div>
+                        </div>
+                    </a>
+
+                    <a href="movies.html" class="trend-card">
+                        <div class="trend-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=1200&auto=format&fit=crop" alt="Broadway Live">
+                            <div class="trend-hover-overlay">
+                                <span class="trend-view-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+                            </div>
+                        </div>
+                        <div class="trend-info">
+                            <span>THEATRE</span>
+                            <h3>Broadway Live</h3>
+                            <p>Chennai • Musical Show</p>
+                            <div class="trend-price">₹799 onwards</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="trend-track second">
+                    <a href="movies.html" class="trend-card">
+                        <div class="trend-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop" alt="Neon Party">
+                            <div class="trend-hover-overlay">
+                                <span class="trend-view-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+                            </div>
+                        </div>
+                        <div class="trend-info">
+                            <span>DJ NIGHT</span>
+                            <h3>Neon Party</h3>
+                            <p>Hyderabad • Club Event</p>
+                            <div class="trend-price">₹1,499 onwards</div>
+                        </div>
+                    </a>
+
+                    <a href="movies.html" class="trend-card">
+                        <div class="trend-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop" alt="Street Carnival">
+                            <div class="trend-hover-overlay">
+                                <span class="trend-view-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+                            </div>
+                        </div>
+                        <div class="trend-info">
+                            <span>FOOD FEST</span>
+                            <h3>Street Carnival</h3>
+                            <p>Kolkata • Food Event</p>
+                            <div class="trend-price">₹199 onwards</div>
+                        </div>
+                    </a>
+
+                    <a href="movies.html" class="trend-card">
+                        <div class="trend-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?q=80&w=1200&auto=format&fit=crop" alt="Fashion Week">
+                            <div class="trend-hover-overlay">
+                                <span class="trend-view-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+                            </div>
+                        </div>
+                        <div class="trend-info">
+                            <span>FASHION</span>
+                            <h3>Fashion Week</h3>
+                            <p>Mumbai • Designer Show</p>
+                            <div class="trend-price">₹2,999 onwards</div>
+                        </div>
+                    </a>
+
+                    <a href="movies.html" class="trend-card">
+                        <div class="trend-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop" alt="Indie Tour">
+                            <div class="trend-hover-overlay">
+                                <span class="trend-view-btn"><i class="fa-solid fa-eye"></i> View Details</span>
+                            </div>
+                        </div>
+                        <div class="trend-info">
+                            <span>LIVE BAND</span>
+                            <h3>Indie Tour</h3>
+                            <p>Bangalore • Arena</p>
+                            <div class="trend-price">₹699 onwards</div>
+                        </div>
+                    </a>
                 </div>
             </div>
-
-            <div class="trend-card">
-                <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=1200&auto=format&fit=crop">
-                <div class="trend-info">
-                    <span>ESPORTS</span>
-                    <h3>Gaming Finals</h3>
-                    <p>Delhi • Arena Event</p>
-                </div>
-            </div>
-
-            <div class="trend-card">
-                <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=1200&auto=format&fit=crop">
-                <div class="trend-info">
-                    <span>THEATRE</span>
-                    <h3>Broadway Live</h3>
-                    <p>Chennai • Musical Show</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="trend-track second">
-
-            <div class="trend-card">
-                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
-                <div class="trend-info">
-                    <span>DJ NIGHT</span>
-                    <h3>Neon Party</h3>
-                    <p>Hyderabad • Club Event</p>
-                </div>
-            </div>
-
-            <div class="trend-card">
-                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop">
-                <div class="trend-info">
-                    <span>FOOD FEST</span>
-                    <h3>Street Carnival</h3>
-                    <p>Kolkata • Food Event</p>
-                </div>
-            </div>
-
-            <div class="trend-card">
-                <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?q=80&w=1200&auto=format&fit=crop">
-                <div class="trend-info">
-                    <span>FASHION</span>
-                    <h3>Fashion Week</h3>
-                    <p>Mumbai • Designer Show</p>
-                </div>
-            </div>
-
-            <div class="trend-card">
-                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop">
-                <div class="trend-info">
-                    <span>LIVE BAND</span>
-                    <h3>Indie Tour</h3>
-                    <p>Bangalore • Arena</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
         <section id="movies" class="container">
             <div class="section-header">
@@ -184,33 +286,42 @@
                     <h2 class="section-title">Recommended Movies</h2>
                     <p class="section-subtitle">Catch the biggest blockbusters in theatres near you</p>
                 </div>
-                <a href="#" class="see-all">See All Movies <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#movies" class="see-all">See All Movies <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
+            <input type="radio" name="filter" id="fil1" class="hidden-toggle" checked>
+            <input type="radio" name="filter" id="fil2" class="hidden-toggle">
+            <input type="radio" name="filter" id="fil3" class="hidden-toggle">
+            <input type="radio" name="filter" id="fil4" class="hidden-toggle">
+            <input type="radio" name="filter" id="fil5" class="hidden-toggle">
+            <input type="radio" name="filter" id="fil6" class="hidden-toggle">
+
             <div class="filter-tags">
-                <button class="filter-btn active">Now Showing</button>
-                <button class="filter-btn">Coming Soon</button>
-                <button class="filter-btn">IMAX 3D</button>
-                <button class="filter-btn">Action & Sci-Fi</button>
-                <button class="filter-btn">Comedy</button>
-                <button class="filter-btn">Regional</button>
+                <label for="fil1" class="filter-btn">Now Showing</label>
+                <label for="fil2" class="filter-btn">Coming Soon</label>
+                <label for="fil3" class="filter-btn">IMAX 3D</label>
+                <label for="fil4" class="filter-btn">Action & Sci-Fi</label>
+                <label for="fil5" class="filter-btn">Comedy</label>
+                <label for="fil6" class="filter-btn">Regional</label>
             </div>
 
             <div class="movie-grid">
-                <!-- Movie Card 1 -->
                 <div class="movie-card">
-                    <div class="poster-container">
+                    <a href="movies.html" class="poster-container">
                         <span class="promoted-badge">Promoted</span>
                         <span class="format-badge">3D / IMAX</span>
                         <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop" alt="Dune: Part Two" class="poster-img">
+                        <div class="poster-hover">
+                            <span class="hover-play"><i class="fa-solid fa-play"></i></span>
+                        </div>
                         <div class="rating-bar">
                             <div class="rating-score"><i class="fa-solid fa-star"></i> 9.4/10</div>
                             <div class="votes-count">482.5K Votes</div>
                         </div>
-                    </div>
+                    </a>
                     <div class="movie-info">
                         <div>
-                            <h3 class="movie-title">Dune: Part Two</h3>
+                            <a href="movies.html" class="movie-title">Dune: Part Two</a>
                             <p class="movie-meta">Sci-Fi / Adventure / Action</p>
                         </div>
                         <div class="card-actions">
@@ -220,18 +331,21 @@
                 </div>
 
                 <div class="movie-card">
-                    <div class="poster-container">
+                    <a href="movies.html" class="poster-container">
                         <span class="format-badge">IMAX 2D</span>
-                        <img src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?q=80&w=800&auto=format&fit=crop" alt="Oppenheimer" class="poster-img">
+                        <img src="https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?q=80&w=800&auto=format&fit=crop" alt="Batman" class="poster-img">
+                        <div class="poster-hover">
+                            <span class="hover-play"><i class="fa-solid fa-play"></i></span>
+                        </div>
                         <div class="rating-bar">
                             <div class="rating-score"><i class="fa-solid fa-star"></i> 9.1/10</div>
                             <div class="votes-count">810K Votes</div>
                         </div>
-                    </div>
+                    </a>
                     <div class="movie-info">
                         <div>
-                            <h3 class="movie-title">Oppenheimer</h3>
-                            <p class="movie-meta">Biography / Drama / History</p>
+                            <a href="movies.html" class="movie-title">Batman</a>
+                            <p class="movie-meta">Action / Drama / History</p>
                         </div>
                         <div class="card-actions">
                             <a href="movies.html" class="book-btn">Book Tickets</a>
@@ -240,17 +354,20 @@
                 </div>
 
                 <div class="movie-card">
-                    <div class="poster-container">
+                    <a href="movies.html" class="poster-container">
                         <span class="format-badge">4DX 3D</span>
-                        <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=800&auto=format&fit=crop" alt="Spider-Man: Across the Spider-Verse" class="poster-img">
+                        <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=800&auto=format&fit=crop" alt="Blossom" class="poster-img">
+                        <div class="poster-hover">
+                            <span class="hover-play"><i class="fa-solid fa-play"></i></span>
+                        </div>
                         <div class="rating-bar">
                             <div class="rating-score"><i class="fa-solid fa-star"></i> 8.9/10</div>
                             <div class="votes-count">245K Votes</div>
                         </div>
-                    </div>
+                    </a>
                     <div class="movie-info">
                         <div>
-                            <h3 class="movie-title">Spider-Man: Across the Spider-Verse</h3>
+                            <a href="movies.html" class="movie-title">Blossom Fragment of Flowers</a>
                             <p class="movie-meta">Animation / Action / Adventure</p>
                         </div>
                         <div class="card-actions">
@@ -260,17 +377,20 @@
                 </div>
 
                 <div class="movie-card">
-                    <div class="poster-container">
+                    <a href="movies.html" class="poster-container">
                         <span class="format-badge">2D Screen</span>
-                        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=800&auto=format&fit=crop" alt="John Wick: Chapter 4" class="poster-img">
+                        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=800&auto=format&fit=crop" alt="John Wick" class="poster-img">
+                        <div class="poster-hover">
+                            <span class="hover-play"><i class="fa-solid fa-play"></i></span>
+                        </div>
                         <div class="rating-bar">
                             <div class="rating-score"><i class="fa-solid fa-star"></i> 8.7/10</div>
                             <div class="votes-count">360K Votes</div>
                         </div>
-                    </div>
+                    </a>
                     <div class="movie-info">
                         <div>
-                            <h3 class="movie-title">John Wick: Chapter 4</h3>
+                            <a href="movies.html" class="movie-title">John Wick: Chapter 4</a>
                             <p class="movie-meta">Action / Crime / Thriller</p>
                         </div>
                         <div class="card-actions">
@@ -280,17 +400,20 @@
                 </div>
 
                 <div class="movie-card">
-                    <div class="poster-container">
+                    <a href="movies.html" class="poster-container">
                         <span class="format-badge">Dolby 7.1</span>
-                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=800&auto=format&fit=crop" alt="Everything Everywhere All at Once" class="poster-img">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=800&auto=format&fit=crop" alt="Everything Everywhere" class="poster-img">
+                        <div class="poster-hover">
+                            <span class="hover-play"><i class="fa-solid fa-play"></i></span>
+                        </div>
                         <div class="rating-bar">
                             <div class="rating-score"><i class="fa-solid fa-star"></i> 9.0/10</div>
                             <div class="votes-count">192K Votes</div>
                         </div>
-                    </div>
+                    </a>
                     <div class="movie-info">
                         <div>
-                            <h3 class="movie-title">Everything Everywhere All at Once</h3>
+                            <a href="movies.html" class="movie-title">Everything Everywhere All at Once</a>
                             <p class="movie-meta">Action / Sci-Fi / Comedy</p>
                         </div>
                         <div class="card-actions">
@@ -301,47 +424,51 @@
             </div>
         </section>
 
-        <section id="events" class="container" style="margin-top: 40px;">
+        <section id="events" class="container events-section">
             <div class="section-header">
                 <div class="section-title-wrapper">
                     <h2 class="section-title">The Best of Live Events</h2>
                     <p class="section-subtitle">Experiences curated for your weekend thrills</p>
                 </div>
-                <a href="#" class="see-all">Explore All Events <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#events" class="see-all">Explore All Events <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
             <div class="promo-grid">
-                <div class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop');">
+                <a href="movies.html" class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop');">
+                    <div class="promo-hover"><i class="fa-solid fa-arrow-right"></i> Explore</div>
                     <div class="promo-content">
-                        <span class="promo-badge" style="color: #38bdf8;">Music Concerts</span>
+                        <span class="promo-badge promo-badge-blue">Music Concerts</span>
                         <h3 class="promo-title">Sunburn Music Arena</h3>
                         <p class="promo-desc">Live EDM & Top International DJs</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1585699324551-f6c309eed567?q=80&w=800&auto=format&fit=crop');">
+                <a href="movies.html" class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1585699324551-f6c309eed567?q=80&w=800&auto=format&fit=crop');">
+                    <div class="promo-hover"><i class="fa-solid fa-arrow-right"></i> Explore</div>
                     <div class="promo-content">
-                        <span class="promo-badge" style="color: #f472b6;">Comedy Clubs</span>
+                        <span class="promo-badge promo-badge-pink">Comedy Clubs</span>
                         <h3 class="promo-title">Stand-Up Comedy Festival</h3>
                         <p class="promo-desc">Top comics live on stage</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=800&auto=format&fit=crop');">
+                <a href="movies.html" class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=800&auto=format&fit=crop');">
+                    <div class="promo-hover"><i class="fa-solid fa-arrow-right"></i> Explore</div>
                     <div class="promo-content">
-                        <span class="promo-badge" style="color: #a78bfa;">Esports & Gaming</span>
+                        <span class="promo-badge promo-badge-purple">Esports & Gaming</span>
                         <h3 class="promo-title">Pro Gaming League 2026</h3>
                         <p class="promo-desc">Arena Championship Finals</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=800&auto=format&fit=crop');">
+                <a href="movies.html" class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=800&auto=format&fit=crop');">
+                    <div class="promo-hover"><i class="fa-solid fa-arrow-right"></i> Explore</div>
                     <div class="promo-content">
-                        <span class="promo-badge" style="color: #fbbf24;">Theatre & Plays</span>
+                        <span class="promo-badge promo-badge-yellow">Theatre & Plays</span>
                         <h3 class="promo-title">Broadway Musical Gala</h3>
                         <p class="promo-desc">Captivating storytelling live</p>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -352,116 +479,121 @@
                         <i class="fa-solid fa-circle-play"></i>
                     </div>
                     <div class="brand-texts">
-                        <h3>BookMyShow STREAM™</h3>
+                        <h3>Bookyourshow STREAM™</h3>
                         <p>Brand new global titles every Friday. Buy or Rent exclusively in full 4K Dolby Vision.</p>
                     </div>
                 </div>
 
-                <div class="section-header" style="margin-top: 0;">
+                <div class="section-header section-header-no-top">
                     <div class="section-title-wrapper">
-                        <h2 class="section-title" style="color: white;">Premieres Exclusively For You</h2>
+                        <h2 class="section-title">Premieres Exclusively For You</h2>
                         <p class="section-subtitle">No subscription required • Rent from ₹99</p>
                     </div>
-                    <a href="#" class="see-all">See All Stream Titles <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#stream" class="see-all">See All Stream Titles <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="movie-grid">
                     <div class="movie-card">
-                        <div class="poster-container">
-                            <span class="format-badge" style="background-color: #3b82f6;">PREMIERE</span>
+                        <a href="movies.html" class="poster-container">
+                            <span class="format-badge format-badge-blue">PREMIERE</span>
                             <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800&auto=format&fit=crop" alt="Space Odyssey" class="poster-img">
+                            <div class="poster-hover"><span class="hover-play"><i class="fa-solid fa-play"></i></span></div>
                             <div class="rating-bar">
                                 <div class="rating-score"><i class="fa-solid fa-star"></i> 8.5/10</div>
                                 <div class="votes-count">4K Ultra HD</div>
                             </div>
-                        </div>
+                        </a>
                         <div class="movie-info">
                             <div>
-                                <h3 class="movie-title">Space Odyssey: Reborn</h3>
+                                <a href="movies.html" class="movie-title">Space Odyssey: Reborn</a>
                                 <p class="movie-meta">English • Sci-Fi / Drama</p>
                             </div>
                             <div class="card-actions">
-                                <a href="stream.html" class="book-btn stream-btn">Rent ₹149</a>
+                                <a href="movies.html" class="book-btn stream-btn">Rent ₹149</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="movie-card">
-                        <div class="poster-container">
-                            <span class="format-badge" style="background-color: #3b82f6;">PREMIERE</span>
+                        <a href="movies.html" class="poster-container">
+                            <span class="format-badge format-badge-blue">PREMIERE</span>
                             <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop" alt="Cyberpunk City" class="poster-img">
+                            <div class="poster-hover"><span class="hover-play"><i class="fa-solid fa-play"></i></span></div>
                             <div class="rating-bar">
                                 <div class="rating-score"><i class="fa-solid fa-star"></i> 8.8/10</div>
                                 <div class="votes-count">Dolby Atmos</div>
                             </div>
-                        </div>
+                        </a>
                         <div class="movie-info">
                             <div>
-                                <h3 class="movie-title">Cyberpunk City: 2099</h3>
+                                <a href="movies.html" class="movie-title">Cyberpunk City: 2099</a>
                                 <p class="movie-meta">English • Action / Thriller</p>
                             </div>
                             <div class="card-actions">
-                                <div class="book-btn" style="background-color: #3b82f6; color: white; border: none;">Rent ₹199</div>
+                                <a href="movies.html" class="book-btn stream-btn">Rent ₹199</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="movie-card">
-                        <div class="poster-container">
-                            <span class="format-badge" style="background-color: #3b82f6;">PREMIERE</span>
-                            <img src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=800&auto=format&fit=crop" alt="Dark Forest Chronicles" class="poster-img">
+                        <a href="movies.html" class="poster-container">
+                            <span class="format-badge format-badge-blue">PREMIERE</span>
+                            <img src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=800&auto=format&fit=crop" alt="Dark Forest" class="poster-img">
+                            <div class="poster-hover"><span class="hover-play"><i class="fa-solid fa-play"></i></span></div>
                             <div class="rating-bar">
                                 <div class="rating-score"><i class="fa-solid fa-star"></i> 7.9/10</div>
-                                <div class="votes-count">Subtitles Available</div>
+                                <div class="votes-count">Subtitles</div>
                             </div>
-                        </div>
+                        </a>
                         <div class="movie-info">
                             <div>
-                                <h3 class="movie-title">Dark Forest Chronicles</h3>
+                                <a href="movies.html" class="movie-title">Dark Forest Chronicles</a>
                                 <p class="movie-meta">Spanish • Horror / Mystery</p>
                             </div>
                             <div class="card-actions">
-                                <div class="book-btn" style="background-color: #3b82f6; color: white; border: none;">Rent ₹129</div>
+                                <a href="movies.html" class="book-btn stream-btn">Rent ₹129</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="movie-card">
-                        <div class="poster-container">
-                            <span class="format-badge" style="background-color: #3b82f6;">PREMIERE</span>
+                        <a href="movies.html" class="poster-container">
+                            <span class="format-badge format-badge-blue">PREMIERE</span>
                             <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop" alt="Neon Nights" class="poster-img">
+                            <div class="poster-hover"><span class="hover-play"><i class="fa-solid fa-play"></i></span></div>
                             <div class="rating-bar">
                                 <div class="rating-score"><i class="fa-solid fa-star"></i> 9.2/10</div>
                                 <div class="votes-count">4K Ultra HD</div>
                             </div>
-                        </div>
+                        </a>
                         <div class="movie-info">
                             <div>
-                                <h3 class="movie-title">Neon Nights: Tokyo Drift</h3>
+                                <a href="movies.html" class="movie-title">Neon Nights: Tokyo Drift</a>
                                 <p class="movie-meta">Japanese • Crime / Action</p>
                             </div>
                             <div class="card-actions">
-                                <div class="book-btn" style="background-color: #3b82f6; color: white; border: none;">Rent ₹249</div>
+                                <a href="movies.html" class="book-btn stream-btn">Rent ₹249</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="movie-card">
-                        <div class="poster-container">
-                            <span class="format-badge" style="background-color: #3b82f6;">PREMIERE</span>
+                        <a href="movies.html" class="poster-container">
+                            <span class="format-badge format-badge-blue">PREMIERE</span>
                             <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?q=80&w=800&auto=format&fit=crop" alt="Love in Paris" class="poster-img">
+                            <div class="poster-hover"><span class="hover-play"><i class="fa-solid fa-play"></i></span></div>
                             <div class="rating-bar">
                                 <div class="rating-score"><i class="fa-solid fa-star"></i> 8.1/10</div>
                                 <div class="votes-count">Bilingual</div>
                             </div>
-                        </div>
+                        </a>
                         <div class="movie-info">
                             <div>
-                                <h3 class="movie-title">Love in Paris: The Finale</h3>
+                                <a href="movies.html" class="movie-title">Love in Paris: The Finale</a>
                                 <p class="movie-meta">French • Romance / Comedy</p>
                             </div>
                             <div class="card-actions">
-                                <div class="book-btn" style="background-color: #3b82f6; color: white; border: none;">Rent ₹99</div>
+                                <a href="movies.html" class="book-btn stream-btn">Rent ₹99</a>
                             </div>
                         </div>
                     </div>
@@ -478,110 +610,118 @@
             </div>
 
             <div class="categories-grid">
-                <div class="category-item">
+                <a href="#events" class="category-item">
                     <div class="category-icon"><i class="fa-solid fa-masks-theater"></i></div>
                     <div class="category-name">Workshops & Masterclasses</div>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="#events" class="category-item">
                     <div class="category-icon"><i class="fa-solid fa-microphone-lines"></i></div>
                     <div class="category-name">Comedy Shows</div>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="#events" class="category-item">
                     <div class="category-icon"><i class="fa-solid fa-guitar"></i></div>
                     <div class="category-name">Music Festivals</div>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="#events" class="category-item">
                     <div class="category-icon"><i class="fa-solid fa-gamepad"></i></div>
                     <div class="category-name">Gaming & Esports</div>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="#events" class="category-item">
                     <div class="category-icon"><i class="fa-solid fa-child-reaching"></i></div>
                     <div class="category-name">Kids & Family</div>
-                </div>
-                <div class="category-item">
+                </a>
+                <a href="#events" class="category-item">
                     <div class="category-icon"><i class="fa-solid fa-campground"></i></div>
                     <div class="category-name">Outdoor Adventures</div>
-                </div>
+                </a>
             </div>
         </section>
 
-        <section id="buzz" class="container">
-            <div class="section-header">
-                <div class="section-title-wrapper">
-                    <h2 class="section-title">BookMyShow Buzz</h2>
-                    <p class="section-subtitle">Stay updated with reviews, news and trending pop culture</p>
-                </div>
-                <a href="#" class="see-all">Explore All Buzz <i class="fa-solid fa-arrow-right"></i></a>
+       <!-- ===== BUZZ ===== -->
+<section id="buzz" class="container">
+    <div class="section-header">
+        <div class="section-title-wrapper">
+            <h2 class="section-title">BookMyShow Buzz</h2>
+            <p class="section-subtitle">Stay updated with reviews, news and trending pop culture</p>
+        </div>
+        <a href="#buzz" class="see-all">Explore All Buzz <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="buzz-grid">
+        <a href="movies.html" class="buzz-card">
+            <div class="buzz-img-box">
+                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=800&auto=format&fit=crop" alt="Cinema Review" class="buzz-img">
+                <div class="buzz-read-badge"><i class="fa-solid fa-book-open"></i> Read More</div>
             </div>
-
-            <div class="buzz-grid">
-                <article class="buzz-card">
-                    <div class="buzz-img-box">
-                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=800&auto=format&fit=crop" alt="Cinema Review" class="buzz-img">
-                    </div>
-                    <div class="buzz-info">
-                        <span class="buzz-tag">Movie Review</span>
-                        <h3 class="buzz-title">Top 10 High-Octane Sci-Fi Thrillers to Watch Before The Year Ends</h3>
-                        <p class="movie-meta" style="margin-bottom: 0;">Explore the definitive list of cinematic masterpieces that redefined the science fiction genre this decade.</p>
-                        <div class="buzz-footer">
-                            <span>By Editorial Team</span>
-                            <span><i class="fa-regular fa-clock"></i> 4 min read</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="buzz-card">
-                    <div class="buzz-img-box">
-                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop" alt="Music Festival" class="buzz-img">
-                    </div>
-                    <div class="buzz-info">
-                        <span class="buzz-tag">Event Guide</span>
-                        <h3 class="buzz-title">Ultimate Guide to Surviving Multi-Day Outdoor Music Festivals in India</h3>
-                        <p class="movie-meta" style="margin-bottom: 0;">From camping essentials to stage schedules, here is everything you need for the ultimate music arena experience.</p>
-                        <div class="buzz-footer">
-                            <span>By Karan S.</span>
-                            <span><i class="fa-regular fa-clock"></i> 6 min read</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="buzz-card">
-                    <div class="buzz-img-box">
-                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=800&auto=format&fit=crop" alt="Theatre Preview" class="buzz-img">
-                    </div>
-                    <div class="buzz-info">
-                        <span class="buzz-tag">Artist Interview</span>
-                        <h3 class="buzz-title">In Conversation with Broadway Directors: Bringing Grandeur to Indian Theatres</h3>
-                        <p class="movie-meta" style="margin-bottom: 0;">Behind the curtains of the latest multimillion-dollar theatrical adaptation touring the country.</p>
-                        <div class="buzz-footer">
-                            <span>By Priya M.</span>
-                            <span><i class="fa-regular fa-clock"></i> 8 min read</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <div class="list-show-banner">
-                <div class="list-show-left">
-                    <h2>Got a Show, Event or Experience?</h2>
-                    <p>Partner with BookMyShow to showcase your event to millions of passionate entertainment seekers across the nation.</p>
-                </div>
-                <div>
-                    <button class="btn btn-primary btn-large" style="white-space: nowrap;"><i class="fa-solid fa-handshake"></i> Contact Today</button>
+            <div class="buzz-info">
+                <span class="buzz-tag">Movie Review</span>
+                <h3 class="buzz-title">Top 10 High-Octane Sci-Fi Thrillers to Watch Before The Year Ends</h3>
+                <p class="movie-meta buzz-desc">Explore the definitive list of cinematic masterpieces that redefined the science fiction genre this decade.</p>
+                <div class="buzz-footer">
+                    <span><i class="fa-regular fa-user"></i> By Editorial Team</span>
+                    <span><i class="fa-regular fa-clock"></i> 4 min read</span>
                 </div>
             </div>
-        </section>
+        </a>
+
+        <a href="movies.html" class="buzz-card">
+            <div class="buzz-img-box">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop" alt="Music Festival" class="buzz-img">
+                <div class="buzz-read-badge"><i class="fa-solid fa-book-open"></i> Read More</div>
+            </div>
+            <div class="buzz-info">
+                <span class="buzz-tag">Event Guide</span>
+                <h3 class="buzz-title">Ultimate Guide to Surviving Multi-Day Outdoor Music Festivals in India</h3>
+                <p class="movie-meta buzz-desc">From camping essentials to stage schedules, here is everything you need for the ultimate music arena experience.</p>
+                <div class="buzz-footer">
+                    <span><i class="fa-regular fa-user"></i> By Karan S.</span>
+                    <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="movies.html" class="buzz-card">
+            <div class="buzz-img-box">
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=800&auto=format&fit=crop" alt="Theatre Preview" class="buzz-img">
+                <div class="buzz-read-badge"><i class="fa-solid fa-book-open"></i> Read More</div>
+            </div>
+            <div class="buzz-info">
+                <span class="buzz-tag">Artist Interview</span>
+                <h3 class="buzz-title">In Conversation with Broadway Directors: Bringing Grandeur to Indian Theatres</h3>
+                <p class="movie-meta buzz-desc">Behind the curtains of the latest multimillion-dollar theatrical adaptation touring the country.</p>
+                <div class="buzz-footer">
+                    <span><i class="fa-regular fa-user"></i> By Priya M.</span>
+                    <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="list-show-banner">
+        <div class="list-show-left">
+            <h2>Got a Show, Event or Experience?</h2>
+            <p>Partner with BookMyShow to showcase your event to millions of passionate entertainment seekers across the nation.</p>
+        </div>
+        <div>
+            <a href="signin.html" class="btn btn-primary btn-large"><i class="fa-solid fa-handshake"></i> Contact Today</a>
+        </div>
+    </div>
+</section>
     </main>
+
+    <a href="#" class="scroll-top" title="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
 
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-logo-col">
-                    <a href="#" class="brand-logo" style="margin-bottom: 16px;">
+                    <a href="index.html" class="brand-logo footer-brand-logo">
                         <i class="fa-solid fa-ticket"></i>
                         BookMy<span>Show</span>
                     </a>
-                    <p class="footer-desc">BookMyShow is India's largest online entertainment ticketing platform offering movie tickets, live event bookings, sports passes, theater shows, and stream rentals.</p>
+                    <p class="footer-desc">BookyourShow is India's largest online entertainment ticketing platform offering movie tickets, live event bookings, sports passes, theater shows, and stream rentals.</p>
                     <div class="social-icons">
                         <a href="#" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="social-btn" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
@@ -594,26 +734,26 @@
                 <div class="footer-col">
                     <h4>Movies by Genre</h4>
                     <div class="footer-links">
-                        <a href="#">Action Movies</a>
-                        <a href="#">Sci-Fi & Fantasy</a>
-                        <a href="#">Romantic Comedies</a>
-                        <a href="#">Horror & Thrillers</a>
-                        <a href="#">Anime & Animation</a>
-                        <a href="#">Historical Dramas</a>
-                        <a href="#">Bollywood Blockbusters</a>
+                        <a href="#movies">Action Movies</a>
+                        <a href="#movies">Sci-Fi & Fantasy</a>
+                        <a href="#movies">Romantic Comedies</a>
+                        <a href="#movies">Horror & Thrillers</a>
+                        <a href="#movies">Anime & Animation</a>
+                        <a href="#movies">Historical Dramas</a>
+                        <a href="#movies">Bollywood Blockbusters</a>
                     </div>
                 </div>
 
                 <div class="footer-col">
                     <h4>Popular Events</h4>
                     <div class="footer-links">
-                        <a href="#">Music Concerts</a>
-                        <a href="#">Standup Comedy</a>
-                        <a href="#">Workshops & Training</a>
-                        <a href="#">Esports Tournaments</a>
-                        <a href="#">Pro Cricket & Sports</a>
-                        <a href="#">Kids Amusement Parks</a>
-                        <a href="#">Art Exhibitions</a>
+                        <a href="#events">Music Concerts</a>
+                        <a href="#events">Standup Comedy</a>
+                        <a href="#events">Workshops & Training</a>
+                        <a href="#events">Esports Tournaments</a>
+                        <a href="#events">Pro Cricket & Sports</a>
+                        <a href="#events">Kids Amusement Parks</a>
+                        <a href="#events">Art Exhibitions</a>
                     </div>
                 </div>
 
@@ -633,7 +773,7 @@
                 <div class="footer-col">
                     <h4>Help & Connect</h4>
                     <div class="footer-links">
-                        <a href="#">About BookMyShow</a>
+                        <a href="#">About BookyourShow</a>
                         <a href="#">24/7 Customer Support</a>
                         <a href="#">Cancellation Policy</a>
                         <a href="#">List Your Show</a>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - BookMyShow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="success.css">
+</head>
+<body>
+
+<!-- Confetti background -->
+<div class="confetti">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="success-page">
+
+    <!-- Success Icon -->
+    <div class="check-wrap">
+        <div class="check-circle">
+            <i class="fa-solid fa-check"></i>
+        </div>
+    </div>
+
+    <h1 class="success-title">Booking Confirmed!</h1>
+    <p class="success-sub">Your tickets have been booked successfully 🎬</p>
+
+    <!-- Ticket -->
+    <div class="ticket">
+        <div class="ticket-top">
+            <div class="ticket-brand">
+                <i class="fa-solid fa-ticket"></i>
+                <span>BookYour<strong>Show</strong></span>
+            </div>
+            <span class="ticket-id">#BMS842091</span>
+        </div>
+
+        <div class="ticket-poster" style="background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1200&auto=format&fit=crop');">
+            <div class="poster-overlay">
+                <h2>Dune: Part Two</h2>
+                <p>English • 2D • UA</p>
+            </div>
+        </div>
+
+        <div class="ticket-info">
+            <div class="info-grid">
+                <div class="info-cell">
+                    <span class="info-label">Date</span>
+                    <span class="info-value">28 Dec 2024</span>
+                </div>
+                <div class="info-cell">
+                    <span class="info-label">Time</span>
+                    <span class="info-value">4:45 PM</span>
+                </div>
+                <div class="info-cell">
+                    <span class="info-label">Screen</span>
+                    <span class="info-value">Audi 3</span>
+                </div>
+                <div class="info-cell">
+                    <span class="info-label">Seats</span>
+                    <span class="info-value highlight">A5, A6</span>
+                </div>
+            </div>
+
+            <div class="theatre-info">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <strong>PVR ICON: Orion Mall</strong>
+                    <p>Dr. Rajkumar Rd, Malleshwaram, Bengaluru</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perforation -->
+        <div class="perforation">
+            <span class="dot-left"></span>
+            <span class="dash-line"></span>
+            <span class="dot-right"></span>
+        </div>
+
+        <!-- QR Code -->
+        <div class="ticket-qr">
+            <div class="qr-box">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&bgcolor=ffffff&color=0f1320&data=BMS-842091-DUNE2-A5A6" alt="QR Code">
+            </div>
+            <div class="qr-text">
+                <p class="amount-paid">₹503</p>
+                <p class="paid-label">Amount Paid</p>
+                <p class="qr-note">Show this QR at theatre entry</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-row">
+        <button class="action-btn"><i class="fa-solid fa-download"></i> Download</button>
+        <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+        <button class="action-btn"><i class="fa-regular fa-envelope"></i> Email</button>
+    </div>
+
+    <!-- Info Card -->
+    <div class="info-card">
+        <h3><i class="fa-solid fa-circle-info"></i> What's next?</h3>
+        <ul>
+            <li><i class="fa-solid fa-check"></i> A confirmation has been sent to your email & SMS</li>
+            <li><i class="fa-solid fa-check"></i> Arrive at least 30 minutes before showtime</li>
+            <li><i class="fa-solid fa-check"></i> Carry a valid ID proof along with the ticket QR</li>
+            <li><i class="fa-solid fa-check"></i> Outside food & drinks are not allowed</li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="home-btn">
+        <i class="fa-solid fa-house"></i> Back to Home
+    </a>
+
+</div>
+
+</body>
+</html>
